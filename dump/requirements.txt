@@ -1,0 +1,7 @@
+antlr4-python3-runtime==4.7.2
+autopep8==2.0.1
+latex2sympy2==1.8.3
+mpmath==1.2.1
+pycodestyle==2.10.0
+sympy==1.11.1
+tomli==2.0.1
