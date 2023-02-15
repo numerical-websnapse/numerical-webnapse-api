@@ -44,8 +44,10 @@ app = application = falcon.App( cors_enable=True,
                                 ]
                             )
 
-# QUESTION ROUTES
+# NSNP SIMULATION REQUEST ROUTES
 app.add_route('/nsnp/simulate', NSNP(), suffix='simulate')
+app.add_route('/nsnp/simulate/single', NSNP(), suffix='simulate_single')
+app.add_route('/nsnp/spiking_matrix', NSNP(), suffix='spiking_matrix')
 
 if __name__ == '__main__':
     with make_server('', 8000, app) as httpd:
