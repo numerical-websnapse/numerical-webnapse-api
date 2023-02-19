@@ -59,6 +59,11 @@ class NSNP:
         self.response_handling(
             resp = resp,
             resp_code = 0,
-            media = NSNP.get_smatrix(config=NSNP.config_mx[0]).tolist()
+            media = {
+                'nrn_ord' : NSNP.neuron_keys,
+                'fnc_ord' : NSNP.function_keys,
+                'var_ord' : NSNP.variable_keys,
+                'spike': NSNP.get_smatrix(config=NSNP.config_mx[0]).tolist(),
+		    }
         )
     # ADD OTHER SIMULATION METHODS HERE
